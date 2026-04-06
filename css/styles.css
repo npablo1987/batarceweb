@@ -1,8 +1,10 @@
 :root {
   --brand-blue: #0d6efd;
+  --brand-navy: #0f1f4a;
   --text-color: #2d3a4a;
   --header-border: #e6ebf1;
   --section-bg: #f4f5f7;
+  --card-border: #d9dee7;
 }
 
 * {
@@ -21,7 +23,7 @@ body {
 }
 
 .brand-title {
-  font-size: clamp(1.75rem, 2.2vw, 2.2rem);
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
   font-weight: 700;
   color: var(--brand-blue);
   letter-spacing: 0.01em;
@@ -33,11 +35,11 @@ body {
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1.35rem;
 }
 
 .nav-link {
-  font-size: 1.35rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: #243447;
   transition: color 0.2s ease;
@@ -50,16 +52,162 @@ body {
 
 .cta-button {
   border-radius: 0.65rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
   box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
 }
 
 .bg-section {
-  min-height: 72px;
   background-color: var(--section-bg);
+}
+
+.section-space {
+  padding: clamp(3.2rem, 7vw, 5.5rem) 0;
+}
+
+.section-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 1.2rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  margin-top: 0.8rem;
+  background: #60be10;
+}
+
+.text-center.section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-title {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-navy);
+  font-size: 2rem;
+  margin: 1.9rem 0 1rem;
+}
+
+.lead-text {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.profile-card,
+.professional-item,
+.location-card {
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(31, 42, 68, 0.08);
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.profile-caption {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.profile-caption h2 {
+  color: var(--brand-navy);
+}
+
+.professional-item {
+  padding: 1.4rem;
+}
+
+.professional-item h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-navy);
+}
+
+.bullet-list {
+  padding-left: 1.3rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+.bullet-list li::marker {
+  color: #60be10;
+}
+
+.section-divider {
+  margin: 1.7rem 0;
+  border-color: #cfd6e3;
+}
+
+.section-soft {
+  background-color: #eef1f6;
+  border-top: 1px solid #d8dee9;
+  border-bottom: 1px solid #d8dee9;
+}
+
+.section-intro {
+  font-size: 1.6rem;
+}
+
+.location-card {
+  padding: 1.8rem;
+}
+
+.location-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-navy);
+  margin-bottom: 1.5rem;
+}
+
+.location-card p {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.site-footer {
+  background-color: #f3f5f8;
+  color: #2d3a4a;
+}
+
+.footer-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+
+.footer-role {
+  font-size: 1.2rem;
+}
+
+.footer-link {
+  color: var(--brand-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border-color: #cfd6e3;
+  margin: 2rem 0 1.4rem;
 }
 
 @media (max-width: 991.98px) {
@@ -72,5 +220,16 @@ body {
   .cta-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .lead-text,
+  .bullet-list li,
+  .section-intro,
+  .location-card p {
+    font-size: 1.05rem;
+  }
+
+  .sub-title {
+    font-size: 1.65rem;
   }
 }
