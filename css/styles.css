@@ -1,10 +1,13 @@
 :root {
   --brand-blue: #0d6efd;
   --brand-blue-dark: #0a58ca;
-  --text-color: #26364a;
+  --brand-navy: #0f1f4a;
+  --text-color: #2d3a4a;
   --title-color: #111b36;
   --header-border: #e6ebf1;
   --hero-bg: #f3f5f8;
+  --section-bg: #f4f5f7;
+  --card-border: #d9dee7;
 }
 
 * {
@@ -23,24 +26,48 @@ body {
   backdrop-filter: saturate(180%) blur(4px);
 }
 
+.brand-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.brand-logo-container:hover {
+  opacity: 0.85;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .brand-title {
-  font-size: clamp(1.75rem, 2.2vw, 2.2rem);
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
   font-weight: 700;
   color: var(--brand-blue);
   letter-spacing: 0.01em;
+  font-family: "Playfair Display", Georgia, serif;
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
 }
 
 .brand-title:hover,
 .brand-title:focus {
-  color: var(--brand-blue-dark);
+  opacity: 0.85;
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 1.35rem;
 }
 
 .nav-link {
-  font-size: 1.12rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: #243447;
   transition: color 0.2s ease;
@@ -53,11 +80,15 @@ body {
 
 .cta-button {
   border-radius: 0.65rem;
-  font-size: 1.08rem;
+  font-size: 1rem;
   font-weight: 700;
   padding-top: 0.65rem;
   padding-bottom: 0.65rem;
-  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
+}
+
+.bg-section {
+  background-color: var(--section-bg);
 }
 
 .hero-section {
@@ -112,10 +143,20 @@ body {
   font-size: 1.08rem;
   font-weight: 700;
   padding: 0.8rem 1.35rem;
+  transition: all 0.3s ease;
 }
 
 .hero-btn-primary {
   box-shadow: 0 8px 20px rgba(13, 110, 253, 0.24);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(13, 110, 253, 0.35);
+}
+
+.hero-btn-secondary:hover {
+  transform: translateY(-2px);
 }
 
 .hero-image-wrapper {
@@ -131,6 +172,7 @@ body {
   object-position: center;
   border-radius: 0.7rem;
   filter: saturate(1.02) contrast(1.02);
+  box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15);
 }
 
 @media (max-width: 1199.98px) {
@@ -140,6 +182,217 @@ body {
 
   .hero-image-wrapper {
     min-height: 520px;
+  }
+}
+
+.section-space {
+  padding: clamp(3.2rem, 7vw, 5.5rem) 0;
+}
+
+.section-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  margin-top: 0.8rem;
+  background: linear-gradient(90deg, var(--brand-blue) 0%, #60be10 100%);
+}
+
+.text-center.section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-title {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-navy);
+  font-size: 2rem;
+  margin: 1.9rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+.lead-text {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.profile-card,
+.professional-item,
+.location-card {
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(31, 42, 68, 0.08);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover,
+.professional-item:hover,
+.location-card:hover {
+  box-shadow: 0 12px 28px rgba(13, 110, 253, 0.15);
+  transform: translateY(-2px);
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.profile-caption {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.profile-caption h2 {
+  color: var(--brand-navy);
+}
+
+.professional-item {
+  padding: 1.4rem;
+}
+
+.professional-item h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-navy);
+}
+
+.bullet-list {
+  padding-left: 1.3rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+.bullet-list li::marker {
+  color: #60be10;
+}
+
+.section-divider {
+  margin: 1.7rem 0;
+  border-color: #cfd6e3;
+}
+
+.section-soft {
+  background-color: #eef1f6;
+  border-top: 1px solid #d8dee9;
+  border-bottom: 1px solid #d8dee9;
+}
+
+.section-intro {
+  font-size: 1.6rem;
+}
+
+.location-card {
+  padding: 1.8rem;
+}
+
+.location-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-navy);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+  font-size: 1.4rem;
+}
+
+.location-card p {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.site-footer {
+  background-color: #f3f5f8;
+  color: #2d3a4a;
+  border-top: 1px solid var(--card-border);
+}
+
+.footer-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.footer-role {
+  font-size: 1.2rem;
+  color: #4f6f94;
+}
+
+.footer-link {
+  color: var(--brand-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--brand-blue-dark);
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border-color: #cfd6e3;
+  margin: 2rem 0 1.4rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-button:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
+}
+
+.location-card p i {
+  margin-right: 0.6rem;
+  color: var(--brand-blue);
+  width: 20px;
+  text-align: center;
+}
+
+.location-card p i.fa-whatsapp {
+  color: #25d366;
+}
+
+@media (max-width: 575.98px) {
+  .whatsapp-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
   }
 }
 
@@ -176,6 +429,17 @@ body {
   .hero-image-wrapper {
     min-height: 430px;
     padding-bottom: 1.25rem;
+  }
+
+  .lead-text,
+  .bullet-list li,
+  .section-intro,
+  .location-card p {
+    font-size: 1.05rem;
+  }
+
+  .sub-title {
+    font-size: 1.65rem;
   }
 }
 
