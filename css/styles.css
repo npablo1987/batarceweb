@@ -1,8 +1,10 @@
 :root {
   --brand-blue: #0d6efd;
-  --text-color: #2d3a4a;
+  --brand-blue-dark: #0a58ca;
+  --text-color: #26364a;
+  --title-color: #111b36;
   --header-border: #e6ebf1;
-  --section-bg: #f4f5f7;
+  --hero-bg: #f3f5f8;
 }
 
 * {
@@ -18,6 +20,7 @@ body {
 
 .site-header {
   border-color: var(--header-border) !important;
+  backdrop-filter: saturate(180%) blur(4px);
 }
 
 .brand-title {
@@ -29,7 +32,7 @@ body {
 
 .brand-title:hover,
 .brand-title:focus {
-  color: #0a58ca;
+  color: var(--brand-blue-dark);
 }
 
 .nav-links {
@@ -37,7 +40,7 @@ body {
 }
 
 .nav-link {
-  font-size: 1.35rem;
+  font-size: 1.12rem;
   font-weight: 500;
   color: #243447;
   transition: color 0.2s ease;
@@ -50,16 +53,94 @@ body {
 
 .cta-button {
   border-radius: 0.65rem;
-  font-size: 1.5rem;
+  font-size: 1.08rem;
   font-weight: 700;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
 }
 
-.bg-section {
-  min-height: 72px;
-  background-color: var(--section-bg);
+.hero-section {
+  background: var(--hero-bg);
+  min-height: calc(100vh - 88px);
+}
+
+.hero-wrapper {
+  min-height: calc(100vh - 88px);
+}
+
+.hero-content {
+  max-width: 680px;
+  margin: auto 0;
+  padding: clamp(2.4rem, 4vw, 5rem) clamp(0.5rem, 2vw, 1.75rem) clamp(2.4rem, 4vw, 4.25rem) 0;
+}
+
+.hero-kicker {
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4f6f94;
+  margin-bottom: 1.15rem;
+}
+
+.hero-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.7rem, 5vw, 5.4rem);
+  line-height: 1.05;
+  color: var(--title-color);
+  margin-bottom: 1.45rem;
+}
+
+.hero-description {
+  font-size: clamp(1.1rem, 1.6vw, 1.9rem);
+  line-height: 1.6;
+  max-width: 58ch;
+  margin-bottom: 2rem;
+  color: #2f4a6c;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.95rem;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  border-radius: 0.65rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  padding: 0.8rem 1.35rem;
+}
+
+.hero-btn-primary {
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.24);
+}
+
+.hero-image-wrapper {
+  height: 100%;
+  min-height: 580px;
+  padding: 0.25rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.7rem;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+@media (max-width: 1199.98px) {
+  .hero-content {
+    padding-right: 1rem;
+  }
+
+  .hero-image-wrapper {
+    min-height: 520px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -72,5 +153,51 @@ body {
   .cta-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-section,
+  .hero-wrapper {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 2.6rem 0 2.2rem;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    max-width: 16ch;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-image-wrapper {
+    min-height: 430px;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .brand-title {
+    font-size: 1.42rem;
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+  }
+
+  .hero-image-wrapper {
+    min-height: 340px;
   }
 }
