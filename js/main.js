@@ -85,3 +85,115 @@ document.addEventListener('DOMContentLoaded', function() {
     slider.addEventListener('selectstart', (e) => e.preventDefault());
   });
 });
+
+// Banner Carousel Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel-container');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+  
+  let currentSlide = 0;
+  let autoplayInterval;
+  
+  function showSlide(n) {
+    // Remover clase active de todos los slides y dots
+    slides.forEach(slide => slide.classList.remove('carousel-slide-active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Agregar clase active al slide y dot actual
+    slides[n].classList.add('carousel-slide-active');
+    dots[n].classList.add('active');
+    
+    currentSlide = n;
+  }
+  
+  function nextSlide() {
+    showSlide((currentSlide + 1) % slides.length);
+  }
+  
+  function prevSlide() {
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+  }
+  
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 6000);
+  }
+  
+  function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+  
+  // Event listeners para botones
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoplay();
+  });
+  
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoplay();
+  });
+  
+  // Event listeners para dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      resetAutoplay();
+    });
+  });
+  
+  // Iniciar autoplay
+  showSlide(0);
+  startAutoplay();
+  
+  // Pausar autoplay al pasar el mouse
+  carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+  carousel.addEventListener('mouseleave', startAutoplay);
+});
+
+// WhatsApp Integration
+document.addEventListener('DOMContentLoaded', function() {
+  const agendarForm = document.getElementById('agendarForm');
+  
+  if (agendarForm) {
+    agendarForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const telefono = document.getElementById('telefono').value;
+      const clinica = document.getElementById('clinica').value;
+      const mensaje = document.getElementById('mensaje').value;
+      
+      // Crear mensaje para WhatsApp
+      const whatsappMessage = `Hola Dr. Batarce, me gustaría agendar una cita.
+      
+Nombre: ${nombre}
+Email: ${email}
+Teléfono: ${telefono}
+Clínica de preferencia: ${clinica}
+Mensaje: ${mensaje}`;
+      
+      // Número de WhatsApp
+      const whatsappNumber = '56962110977';
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      
+      // Abrir WhatsApp
+      window.open(whatsappUrl, '_blank');
+      
+      // Mostrar confirmación
+      alert('Se abrirá WhatsApp para completar tu cita. ¡Gracias!');
+      
+      // Resetear formulario
+      agendarForm.reset();
+      
+      // Cerrar modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('agendarModal'));
+      if (modal) modal.hide();
+    });
+  }
+});

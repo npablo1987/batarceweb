@@ -76,7 +76,81 @@
       </nav>
     </header>
 
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+      <div class="loading-container">
+        <div class="loading-logo">
+          <img src="img/logo.svg" alt="Logo" class="logo-animate" />
+        </div>
+        <h1 class="loading-text">Dr. Christian Batarce</h1>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
+
     <main class="bg-section">
+      <!-- Banner Carrusel -->
+      <section class="banner-carousel" id="banner-carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide carousel-slide-active" data-slide="0">
+            <div class="slide-background">
+              <img src="img/drbatarce.png" alt="Dr. Christian Batarce - Slide 1" class="slide-image" />
+            </div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-text">
+                <h2 class="slide-title">Sonrisa Perfecta</h2>
+                <p class="slide-subtitle">Especialista en ortodoncia y rehabilitación oral</p>
+                <button class="slide-cta" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar Cita</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide" data-slide="1">
+            <div class="slide-background">
+              <img src="img/drbatarce2.JPG" alt="Dr. Christian Batarce - Slide 2" class="slide-image" />
+            </div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-text">
+                <h2 class="slide-title">Experiencia Profesional</h2>
+                <p class="slide-subtitle">Más de 15 años dedicados a tu salud dental</p>
+                <button class="slide-cta" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar Cita</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide" data-slide="2">
+            <div class="slide-background">
+              <img src="img/drbatarce3.png" alt="Dr. Christian Batarce - Slide 3" class="slide-image" />
+            </div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-text">
+                <h2 class="slide-title">Tecnología Moderna</h2>
+                <p class="slide-subtitle">Equipamiento de última generación para tu confort</p>
+                <button class="slide-cta" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar Cita</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+          <button class="carousel-dot" data-slide="0" aria-label="Slide 1"></button>
+          <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+
+        <button class="carousel-nav carousel-prev" aria-label="Slide anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav carousel-next" aria-label="Siguiente slide">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
       <section class="hero-section" id="quien-soy">
         <div class="hero-background">
           <div class="hero-gradient-blob hero-blob-1"></div>
@@ -105,7 +179,7 @@
                 <div class="hero-image-frame">
                   <img
                     class="hero-image"
-                    src="img/drbatarce.png"
+                    src="img/drbatarce3.png"
                     alt="Dr. Christian Batarce sonriendo en su consulta odontológica"
                     loading="eager"
                     width="1024"
@@ -123,57 +197,34 @@
           <div class="col-lg-4">
             <figure class="profile-card mb-3">
               <img
-                src="img/drbatarce.png"
+                src="img/drbatarce3.png"
                 class="img-fluid profile-image"
                 alt="Retrato del Dr. Christian Batarce"
               />
               <figcaption class="profile-caption">
                 <h2 class="h4 mb-1">Dr. Christian Batarce</h2>
-                <p class="mb-0">Especialista en Odontología Integral</p>
               </figcaption>
             </figure>
 
-            <article class="professional-item">
-              <h3 class="h5 mb-3">Reconocimientos Profesionales</h3>
-              <ul class="list-unstyled mb-0 bullet-list">
-                <li>Miembro activo de la Sociedad Chilena de Odontología.</li>
-                <li>Actualización continua en rehabilitación oral y estética dental.</li>
-                <li>Enfoque clínico respaldado por protocolos internacionales.</li>
-              </ul>
-            </article>
           </div>
 
           <div class="col-lg-8">
             <h2 class="section-title">Quién Soy</h2>
-            <p class="lead-text">
-              Soy un profesional dedicado a la odontología integral con más de 15 años de experiencia en el área.
-              Mi formación académica incluye estudios especializados en diversas disciplinas de la odontología
-              moderna, permitiéndome ofrecer soluciones completas y personalizadas para cada paciente.
-            </p>
 
             <h3 class="sub-title">Formación Académica</h3>
             <ul class="bullet-list">
-              <li>Licenciado en Odontología - Universidad de Talca</li>
-              <li>Especialización en Ortodoncia - Universidad de Chile</li>
-              <li>Diplomado en Implantología - Instituto Latinoamericano de Implantes</li>
-              <li>Certificación en Rehabilitación Oral - Sociedad Chilena de Odontología</li>
+              <li>Cirujano Dentista Especialista en Ortodoncia</li>
+              <li>Centro Universitario Amparense UNIFIA, Sao Paulo, Brasil</li>
             </ul>
 
             <h3 class="sub-title">Áreas de Especialización</h3>
             <ul class="bullet-list">
-              <li>Ortodoncia y alineación de dientes</li>
-              <li>Implantología y rehabilitación oral</li>
-              <li>Estética dental y blanqueamiento profesional</li>
-              <li>Endodoncia y tratamientos de conductos</li>
-              <li>Cirugía bucal y extracciones complejas</li>
+              <li>Certificación CCO System (2022)</li>
+              <li>Certificación MBT (2015)</li>
+              <li>Certificación 6 Elementos – The Andrews Foundation (2022)</li>
+              <li>Certificación ClearCorrect Straumann (2023)</li>
+              <li>Pasantía presencial en Harvard School of Dental Medicine (2024)</li>
             </ul>
-
-            <hr class="section-divider" />
-            <p class="lead-text mb-0">
-              Mi compromiso es proporcionar atención de calidad, utilizando tecnología de punta y manteniendo un
-              enfoque humanista. Cada paciente recibe un plan de tratamiento personalizado, considerando sus
-              necesidades específicas y objetivos estéticos y funcionales.
-            </p>
           </div>
         </div>
       </section>
@@ -288,8 +339,6 @@
                   </div>
                 </div>
                 <div class="case-content">
-                  <h3 class="case-title">Blanqueamiento Dental</h3>
-                  <p class="case-description">Transformación completa del color de los dientes</p>
                 </div>
               </div>
             </div>
@@ -308,8 +357,6 @@
                   </div>
                 </div>
                 <div class="case-content">
-                  <h3 class="case-title">Restauración Dental</h3>
-                  <p class="case-description">Reparación de dientes dañados con coronas</p>
                 </div>
               </div>
             </div>
@@ -328,8 +375,6 @@
                   </div>
                 </div>
                 <div class="case-content">
-                  <h3 class="case-title">Ortodoncia</h3>
-                  <p class="case-description">Alineación perfecta de dientes</p>
                 </div>
               </div>
             </div>
@@ -348,8 +393,6 @@
                   </div>
                 </div>
                 <div class="case-content">
-                  <h3 class="case-title">Implantología</h3>
-                  <p class="case-description">Reemplazo de dientes con implantes</p>
                 </div>
               </div>
             </div>
@@ -368,8 +411,6 @@
                   </div>
                 </div>
                 <div class="case-content">
-                  <h3 class="case-title">Estética Dental</h3>
-                  <p class="case-description">Mejora estética integral de la sonrisa</p>
                 </div>
               </div>
             </div>
@@ -388,8 +429,6 @@
                   </div>
                 </div>
                 <div class="case-content">
-                  <h3 class="case-title">Rehabilitación Oral</h3>
-                  <p class="case-description">Reconstrucción completa de la dentadura</p>
                 </div>
               </div>
             </div>
@@ -408,9 +447,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="testimonial-card">
                 <div class="testimonial-image-wrapper">
-                  <div class="testimonial-image-placeholder">
-                    <i class="fas fa-user"></i>
-                  </div>
+                  <img src="img/testimonios/testimonio1.JPG" alt="Testimonio 1" class="w-100 h-100" style="object-fit: cover;" />
                 </div>
                 <div class="testimonial-content">
                   <div class="testimonial-quote">
@@ -420,12 +457,12 @@
                     "Excelente atención, muy profesional. Mi sonrisa cambió completamente. Recomiendo ampliamente."
                   </p>
                   <div class="testimonial-author">
-                    <h4 class="testimonial-name">María García</h4>
+                    <h4 class="testimonial-name">Paciente 1</h4>
                     <p class="testimonial-role">Paciente</p>
                   </div>
-                  <button class="testimonial-video-btn">
+                  <a href="https://www.instagram.com/p/DSLC_l8Eaim/" target="_blank" class="testimonial-video-btn">
                     <i class="fas fa-play"></i> Ver Video
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -433,9 +470,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="testimonial-card">
                 <div class="testimonial-image-wrapper">
-                  <div class="testimonial-image-placeholder">
-                    <i class="fas fa-user"></i>
-                  </div>
+                  <img src="img/testimonios/testimonio2.png" alt="Testimonio 2" class="w-100 h-100" style="object-fit: cover;" />
                 </div>
                 <div class="testimonial-content">
                   <div class="testimonial-quote">
@@ -445,12 +480,12 @@
                     "El Dr. es muy dedicado y atento. Los resultados superaron mis expectativas. Muy satisfecho."
                   </p>
                   <div class="testimonial-author">
-                    <h4 class="testimonial-name">Juan López</h4>
+                    <h4 class="testimonial-name">Paciente 2</h4>
                     <p class="testimonial-role">Paciente</p>
                   </div>
-                  <button class="testimonial-video-btn">
+                  <a href="https://www.instagram.com/p/CrT_wT5NIlo/" target="_blank" class="testimonial-video-btn">
                     <i class="fas fa-play"></i> Ver Video
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -458,9 +493,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="testimonial-card">
                 <div class="testimonial-image-wrapper">
-                  <div class="testimonial-image-placeholder">
-                    <i class="fas fa-user"></i>
-                  </div>
+                  <img src="img/testimonios/testimonio3.png" alt="Testimonio 3" class="w-100 h-100" style="object-fit: cover;" />
                 </div>
                 <div class="testimonial-content">
                   <div class="testimonial-quote">
@@ -470,12 +503,12 @@
                     "Clínica moderna, equipo profesional. Me hicieron sentir cómoda en todo momento. Gracias."
                   </p>
                   <div class="testimonial-author">
-                    <h4 class="testimonial-name">Ana Martínez</h4>
+                    <h4 class="testimonial-name">Paciente 3</h4>
                     <p class="testimonial-role">Paciente</p>
                   </div>
-                  <button class="testimonial-video-btn">
+                  <a href="https://www.instagram.com/p/CrPFg8jpAbS/" target="_blank" class="testimonial-video-btn">
                     <i class="fas fa-play"></i> Ver Video
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -487,7 +520,7 @@
         <div class="container">
           <h2 class="section-title text-center">Dónde Encontrarnos</h2>
           <p class="section-intro text-center mb-5">
-            Contamos con 4 ubicaciones estratégicas para brindarte la mejor atención.
+            Contamos con 3 ubicaciones estratégicas para brindarte la mejor atención.
           </p>
 
           <div class="row g-4">
@@ -495,32 +528,21 @@
               <article class="location-card h-100">
                 <h3>Clínica IOT Talca</h3>
                 <p><i class="fas fa-map-marker-alt"></i> 3 Poniente #1290, esquina 2 Norte, Talca</p>
-                <p><i class="fas fa-phone"></i> +56 2 3366 3300</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp: +56 9 3255 4466</p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56962110977" target="_blank" style="color: inherit; text-decoration: none;">WhatsApp: +569 62110977</a></p>
               </article>
             </div>
             <div class="col-md-6">
               <article class="location-card h-100">
-                <h3>Clínica VG Odontología Talca Pichimpau</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Pichimpau, Talca</p>
-                <p><i class="fas fa-phone"></i> +56 2 1234 5678</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp: +56 9 1234 5678</p>
+                <h3>Clínica VG Odontología Talca</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Edificio Centro Pichimapu #1285 Oficina 423 y 424</p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56962110977" target="_blank" style="color: inherit; text-decoration: none;">WhatsApp: +569 62110977</a></p>
               </article>
             </div>
             <div class="col-md-6">
               <article class="location-card h-100">
                 <h3>Clínica Dental Maule Curicó</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Avenida Principal, Curicó</p>
-                <p><i class="fas fa-phone"></i> +56 2 9876 5432</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp: +56 9 9876 5432</p>
-              </article>
-            </div>
-            <div class="col-md-6">
-              <article class="location-card h-100">
-                <h3>Clínica Dental Chillán</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Centro, Chillán</p>
-                <p><i class="fas fa-phone"></i> +56 2 5555 5555</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp: +56 9 5555 5555</p>
+                <p><i class="fas fa-map-marker-alt"></i> Serrano #81, frente al Hospital de Emergencia</p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/56962110977" target="_blank" style="color: inherit; text-decoration: none;">WhatsApp: +569 62110977</a></p>
               </article>
             </div>
           </div>
@@ -546,16 +568,16 @@
 
             <div class="col-lg-3 col-md-6">
               <div class="footer-column">
-                <h3 class="footer-title">¿Dónde estamos?</h3>
+                <h3 class="footer-title">Donde encontrarnos</h3>
                 <p class="footer-text">Clínica IOT Talca</p>
-                <p class="footer-text">3 Poniente #1290, esquina 2 Norte</p>
-                <p class="footer-text">Talca, Chile</p>
+                <p class="footer-text">3 Poniente #1290, esquina 2 Norte, Talca</p>
                 <p class="footer-text mt-3">
-                  <i class="fas fa-phone"></i> +56 9 3255 4466
+                  <i class="fab fa-whatsapp"></i> <a href="https://wa.me/56962110977" target="_blank" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;">+569 62110977</a>
                 </p>
-                <p class="footer-text">
-                  <i class="fas fa-envelope"></i> contacto@drchristianbatarce.cl
-                </p>
+                <p class="footer-text mt-2">Clínica VG Odontología Talca</p>
+                <p class="footer-text">Edificio Centro Pichimapu #1285</p>
+                <p class="footer-text mt-2">Clínica Dental Maule Curicó</p>
+                <p class="footer-text">Serrano #81, frente al Hospital</p>
               </div>
             </div>
 
@@ -580,9 +602,6 @@
                   </a>
                   <a href="#" class="social-icon" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="#" class="social-icon" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
                   </a>
                 </div>
               </div>
@@ -617,7 +636,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body">
-            <p class="modal-intro">Complete el formulario y nos pondremos en contacto con usted para confirmar su cita.</p>
+            <p class="modal-intro">Complete el formulario y lo enviaremos directamente por WhatsApp para confirmar su cita de forma rápida y segura.</p>
             
             <form id="agendarForm" class="appointment-form">
               <div class="row g-3">
@@ -636,39 +655,6 @@
                   <input type="tel" class="form-control" id="telefono" name="telefono" required>
                 </div>
                 
-                <div class="col-md-6">
-                  <label for="fecha" class="form-label">Fecha Preferida *</label>
-                  <input type="date" class="form-control" id="fecha" name="fecha" required>
-                </div>
-                
-                <div class="col-md-6">
-                  <label for="hora" class="form-label">Hora Preferida *</label>
-                  <select class="form-select" id="hora" name="hora" required>
-                    <option value="">Seleccione una hora</option>
-                    <option value="09:00">09:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="14:00">02:00 PM</option>
-                    <option value="15:00">03:00 PM</option>
-                    <option value="16:00">04:00 PM</option>
-                    <option value="17:00">05:00 PM</option>
-                  </select>
-                </div>
-                
-                <div class="col-md-6">
-                  <label for="servicio" class="form-label">Tipo de Servicio *</label>
-                  <select class="form-select" id="servicio" name="servicio" required>
-                    <option value="">Seleccione un servicio</option>
-                    <option value="blanqueamiento">Blanqueamiento Dental</option>
-                    <option value="ortodoncia">Ortodoncia</option>
-                    <option value="implantes">Implantología</option>
-                    <option value="estetica">Estética Dental</option>
-                    <option value="restauracion">Restauración Dental</option>
-                    <option value="limpieza">Limpieza Dental</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
                 
                 <div class="col-12">
                   <label for="clinica" class="form-label">Clínica de Preferencia *</label>
@@ -698,7 +684,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             <button type="submit" form="agendarForm" class="btn btn-primary">
-              <i class="fas fa-calendar-check"></i> Solicitar Cita
+              <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
             </button>
           </div>
         </div>
