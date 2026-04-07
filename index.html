@@ -90,104 +90,54 @@
     </div>
 
     <main class="bg-section">
-      <!-- Banner Carrusel -->
-      <section class="banner-carousel" id="banner-carousel">
-        <div class="carousel-container">
-          <div class="carousel-slide carousel-slide-active" data-slide="0">
-            <div class="slide-background">
-              <img src="img/drbatarce.png" alt="Dr. Christian Batarce - Slide 1" class="slide-image" />
-            </div>
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <div class="slide-text">
-                <h2 class="slide-title">Sonrisa Perfecta</h2>
-                <p class="slide-subtitle">Especialista en ortodoncia y rehabilitación oral</p>
-                <button class="slide-cta" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar Cita</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-slide" data-slide="1">
-            <div class="slide-background">
-              <img src="img/drbatarce2.JPG" alt="Dr. Christian Batarce - Slide 2" class="slide-image" />
-            </div>
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <div class="slide-text">
-                <h2 class="slide-title">Experiencia Profesional</h2>
-                <p class="slide-subtitle">Más de 15 años dedicados a tu salud dental</p>
-                <button class="slide-cta" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar Cita</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-slide" data-slide="2">
-            <div class="slide-background">
-              <img src="img/drbatarce3.png" alt="Dr. Christian Batarce - Slide 3" class="slide-image" />
-            </div>
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-              <div class="slide-text">
-                <h2 class="slide-title">Tecnología Moderna</h2>
-                <p class="slide-subtitle">Equipamiento de última generación para tu confort</p>
-                <button class="slide-cta" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar Cita</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Carousel Controls -->
-        <div class="carousel-controls">
-          <button class="carousel-dot" data-slide="0" aria-label="Slide 1"></button>
-          <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-          <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-        </div>
-
-        <button class="carousel-nav carousel-prev" aria-label="Slide anterior">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-nav carousel-next" aria-label="Siguiente slide">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </section>
-
-      <section class="hero-section" id="quien-soy">
-        <div class="hero-background">
-          <div class="hero-gradient-blob hero-blob-1"></div>
-          <div class="hero-gradient-blob hero-blob-2"></div>
-          <div class="hero-gradient-blob hero-blob-3"></div>
-        </div>
-        
+      <section class="hero-banner" id="quien-soy">
         <div class="container-fluid px-3 px-lg-4">
-          <div class="row g-4 align-items-center hero-wrapper">
-            <div class="col-lg-7 d-flex">
-              <div class="hero-content">
-                <p class="hero-kicker">Odontología estética y rehabilitación oral</p>
-                <h1 class="hero-title">Tu sonrisa perfecta comienza aquí</h1>
-                <p class="hero-description">
-                  Especialista en odontología con más de 15 años de experiencia. Dedicado a brindarte la mejor
-                  atención con tecnología moderna y calidez humana.
-                </p>
-                <div class="hero-actions">
-                  <button class="btn btn-primary btn-lg hero-btn-primary" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar cita</button>
-                  <a class="btn btn-outline-primary btn-lg hero-btn-secondary" href="#casos">Conocer más</a>
-                </div>
+          <div class="hero-banner-main">
+            <div class="hero-banner-content">
+              <p class="hero-kicker">Odontología estética y rehabilitación oral</p>
+              <h1 class="hero-title">Tu sonrisa perfecta comienza aquí</h1>
+              <p class="hero-description">
+                Especialista en odontología con más de 15 años de experiencia. Dedicado a brindarte la mejor
+                atención con tecnología moderna y calidez humana.
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-primary btn-lg hero-btn-primary" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar cita</button>
+                <a class="btn btn-outline-primary btn-lg hero-btn-secondary" href="#casos">Conocer más</a>
               </div>
             </div>
-            <div class="col-lg-5">
-              <div class="hero-image-wrapper">
-                <div class="hero-image-frame">
-                  <img
-                    class="hero-image"
-                    src="img/drbatarce3.png"
-                    alt="Dr. Christian Batarce sonriendo en su consulta odontológica"
-                    loading="eager"
-                    width="1024"
-                    height="1365"
-                  />
-                </div>
-              </div>
+
+            <div class="hero-banner-image-panel">
+              <img
+                class="hero-banner-image"
+                src="img/drbatarce3.png"
+                alt="Dr. Christian Batarce atendiendo a un paciente en su consulta odontológica"
+                loading="eager"
+                width="1024"
+                height="1365"
+              />
             </div>
+          </div>
+
+          <div class="hero-banner-cards" aria-label="Información destacada">
+            <article class="hero-info-card hero-info-card-primary">
+              <i class="fa-solid fa-phone-volume hero-info-icon" aria-hidden="true"></i>
+              <h2>Agenda tu evaluación</h2>
+              <p>Atención personalizada y diagnósticos claros para diseñar el mejor plan para tu sonrisa.</p>
+              <a href="tel:+56932554466">+56 9 3255 4466</a>
+            </article>
+
+            <article class="hero-info-card hero-info-card-secondary">
+              <i class="fa-regular fa-calendar-check hero-info-icon" aria-hidden="true"></i>
+              <h2>Horarios de consulta</h2>
+              <p>Lunes a Viernes de 09:00 a 19:00. Reserva tu hora de forma rápida y segura.</p>
+              <button class="hero-info-btn" data-bs-toggle="modal" data-bs-target="#agendarModal">Ver disponibilidad</button>
+            </article>
+
+            <article class="hero-info-card hero-info-card-tertiary">
+              <i class="fa-solid fa-tooth hero-info-icon" aria-hidden="true"></i>
+              <h2>Tratamientos integrales</h2>
+              <p>Ortodoncia, rehabilitación oral y estética dental con tecnología moderna y enfoque humano.</p>
+            </article>
           </div>
         </div>
       </section>
