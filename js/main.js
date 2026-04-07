@@ -129,3 +129,35 @@ Mensaje: ${mensaje}`;
     });
   }
 });
+
+// WhatsApp Chat Input Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const messageInput = document.getElementById('whatsappMessageInput');
+  const sendBtn = document.getElementById('whatsappSendBtn');
+  
+  if (messageInput && sendBtn) {
+    sendBtn.addEventListener('click', function() {
+      const message = messageInput.value.trim();
+      
+      if (message) {
+        // Número de WhatsApp
+        const whatsappNumber = '56962110977';
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Abrir WhatsApp
+        window.open(whatsappUrl, '_blank');
+        
+        // Limpiar input
+        messageInput.value = '';
+      }
+    });
+    
+    // Permitir enviar con Enter
+    messageInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendBtn.click();
+      }
+    });
+  }
+});

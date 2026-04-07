@@ -91,52 +91,48 @@
 
     <main class="bg-section">
       <section class="hero-banner" id="quien-soy">
-        <div class="container-fluid px-3 px-lg-4">
-          <div class="hero-banner-main">
+        <div class="hero-banner-wrapper">
+          <div class="hero-banner-content-wrapper">
             <div class="hero-banner-content">
-              <p class="hero-kicker">Odontología estética y rehabilitación oral</p>
               <h1 class="hero-title">Tu sonrisa perfecta comienza aquí</h1>
               <p class="hero-description">
-                Especialista en odontología con más de 15 años de experiencia. Dedicado a brindarte la mejor
-                atención con tecnología moderna y calidez humana.
+                Especialista en odontología con más de 15 años de experiencia. Dedicado a brindarte la mejor atención con tecnología moderna.
               </p>
               <div class="hero-actions">
-                <button class="btn btn-primary btn-lg hero-btn-primary" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar cita</button>
-                <a class="btn btn-outline-primary btn-lg hero-btn-secondary" href="#casos">Conocer más</a>
+                <button class="btn btn-primary hero-btn-primary" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar cita</button>
               </div>
             </div>
 
             <div class="hero-banner-image-panel">
-              <img
-                class="hero-banner-image"
-                src="img/drbatarce3.png"
-                alt="Dr. Christian Batarce atendiendo a un paciente en su consulta odontológica"
-                loading="eager"
-                width="1024"
-                height="1365"
-              />
+              <div class="hero-image-circle">
+                <img
+                  class="hero-banner-image"
+                  src="img/drbatarce3.png"
+                  alt="Dr. Christian Batarce"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
 
           <div class="hero-banner-cards" aria-label="Información destacada">
             <article class="hero-info-card hero-info-card-primary">
               <i class="fa-solid fa-phone-volume hero-info-icon" aria-hidden="true"></i>
-              <h2>Agenda tu evaluación</h2>
-              <p>Atención personalizada y diagnósticos claros para diseñar el mejor plan para tu sonrisa.</p>
-              <a href="tel:+56932554466">+56 9 3255 4466</a>
+              <h2>Contacto</h2>
+              <p>Comunícate con nosotros por WhatsApp para agendar tu cita.</p>
+              <a href="https://wa.me/56962110977" target="_blank">+569 62110977</a>
             </article>
 
             <article class="hero-info-card hero-info-card-secondary">
-              <i class="fa-regular fa-calendar-check hero-info-icon" aria-hidden="true"></i>
-              <h2>Horarios de consulta</h2>
-              <p>Lunes a Viernes de 09:00 a 19:00. Reserva tu hora de forma rápida y segura.</p>
-              <button class="hero-info-btn" data-bs-toggle="modal" data-bs-target="#agendarModal">Ver disponibilidad</button>
+              <i class="fa-regular fa-clock hero-info-icon" aria-hidden="true"></i>
+              <h2>Horarios</h2>
+              <p>Lunes a Viernes: 09:00 - 19:00<br>Sábado y Domingo: Cerrado</p>
             </article>
 
             <article class="hero-info-card hero-info-card-tertiary">
               <i class="fa-solid fa-tooth hero-info-icon" aria-hidden="true"></i>
-              <h2>Tratamientos integrales</h2>
-              <p>Ortodoncia, rehabilitación oral y estética dental con tecnología moderna y enfoque humano.</p>
+              <h2>Ortodoncia Autoligado CC0 System </h2>
+              <p>Tratamientos de ortodoncia 100% digitales y personalizados, diseñados para lograr una sonrisa más rápida, cómoda y precisa</p>
             </article>
           </div>
         </div>
@@ -191,8 +187,8 @@
                   <i class="fas fa-phone"></i>
                 </div>
                 <div class="contact-content">
-                  <h3 class="contact-label">Teléfono</h3>
-                  <a href="tel:+56932554466" class="contact-value">+56 9 3255 4466</a>
+                  <h3 class="contact-label">WhatsApp</h3>
+                  <a href="https://wa.me/56962110977" target="_blank" class="contact-value">+569 62110977</a>
                 </div>
               </div>
 
@@ -206,20 +202,11 @@
                 </div>
               </div>
 
-              <div class="contact-item mb-5">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-content">
-                  <h3 class="contact-label">Ubicación Principal</h3>
-                  <p class="contact-value">3 Poniente #1290, Talca</p>
-                </div>
-              </div>
 
               <div class="contact-hours">
                 <h3 class="contact-label mb-3">Horario de Atención</h3>
-                <p class="mb-2"><strong>Lunes - Viernes:</strong> 9:00 - 18:00</p>
-                <p class="mb-2"><strong>Sábado:</strong> 10:00 - 14:00</p>
+                <p class="mb-2"><strong>Lunes - Viernes:</strong> 09:00 - 19:00</p>
+                <p class="mb-2"><strong>Sábado:</strong> Cerrado</p>
                 <p class="mb-0"><strong>Domingo:</strong> Cerrado</p>
               </div>
             </div>
@@ -255,8 +242,8 @@
                   </div>
 
                   <div class="phone-input">
-                    <input type="text" placeholder="Escribe un mensaje..." readonly />
-                    <button class="send-btn">
+                    <input type="text" id="whatsappMessageInput" placeholder="Escribe un mensaje..." />
+                    <button class="send-btn" id="whatsappSendBtn">
                       <i class="fas fa-paper-plane"></i>
                     </button>
                   </div>
@@ -468,7 +455,7 @@
 
       <section id="ubicaciones" class="section-space section-soft">
         <div class="container">
-          <h2 class="section-title text-center">Dónde Encontrarnos</h2>
+          <h2 class="section-title text-center">Dónde Encontrarme</h2>
           <p class="section-intro text-center mb-5">
             Contamos con 3 ubicaciones estratégicas para brindarte la mejor atención.
           </p>
@@ -541,14 +528,14 @@
             <aside class="footer-contact-card" aria-label="Contacto rápido">
               <h3 class="footer-title">Contacto rápido</h3>
               <p class="footer-contact-text">Si tienes dudas o necesitas ayuda, nuestro equipo está listo para ayudarte.</p>
-              <p class="footer-phone"><i class="fa-solid fa-phone"></i> +56 9 3255 4466</p>
-              <p class="footer-address">3 Poniente #1290, Talca, Región del Maule, Chile.</p>
+              <p class="footer-phone"><i class="fa-solid fa-phone"></i> <a href="https://wa.me/56962110977" target="_blank" style="color: inherit; text-decoration: none;">+569 62110977</a></p>
+              <p class="footer-address"></p>
               <div class="footer-contact-actions">
                 <a href="#ubicaciones" class="footer-cta footer-cta-small">Ver ubicaciones</a>
                 <div class="footer-social">
-                  <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                  <a href="https://wa.me/56932554466" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61577513951476" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/dr.christianbatarce" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://wa.me/56962110977" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
               </div>
             </aside>
@@ -568,7 +555,7 @@
       </div>
     </footer>
 
-    <a href="https://wa.me/56932554466" class="whatsapp-button" title="Contactar por WhatsApp">
+    <a href="https://wa.me/56962110977" class="whatsapp-button" title="Contactar por WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -608,7 +595,6 @@
                     <option value="iot-talca">Clínica IOT Talca</option>
                     <option value="vg-pichimpau">Clínica VG Odontología Talca Pichimpau</option>
                     <option value="dental-curico">Clínica Dental Maule Curicó</option>
-                    <option value="dental-chillan">Clínica Dental Chillán</option>
                   </select>
                 </div>
                 
