@@ -60,11 +60,11 @@
                 <a class="nav-link" href="#ubicaciones">Ubicaciones</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contacto">Contacto</a>
+                <a class="nav-link" href="#contacto-seccion">Contacto</a>
               </li>
             </ul>
 
-            <a class="btn btn-primary px-4 cta-button" href="#agendar">Agendar</a>
+            <button class="btn btn-primary px-4 cta-button" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar</button>
           </div>
         </div>
       </nav>
@@ -72,9 +72,15 @@
 
     <main class="bg-section">
       <section class="hero-section" id="quien-soy">
+        <div class="hero-background">
+          <div class="hero-gradient-blob hero-blob-1"></div>
+          <div class="hero-gradient-blob hero-blob-2"></div>
+          <div class="hero-gradient-blob hero-blob-3"></div>
+        </div>
+        
         <div class="container-fluid px-3 px-lg-4">
-          <div class="row g-0 align-items-stretch hero-wrapper">
-            <div class="col-lg-6 d-flex">
+          <div class="row g-4 align-items-center hero-wrapper">
+            <div class="col-lg-7 d-flex">
               <div class="hero-content">
                 <p class="hero-kicker">Odontología estética y rehabilitación oral</p>
                 <h1 class="hero-title">Tu sonrisa perfecta comienza aquí</h1>
@@ -83,21 +89,23 @@
                   atención con tecnología moderna y calidez humana.
                 </p>
                 <div class="hero-actions">
-                  <a class="btn btn-primary btn-lg hero-btn-primary" href="#agendar">Agendar cita</a>
+                  <button class="btn btn-primary btn-lg hero-btn-primary" data-bs-toggle="modal" data-bs-target="#agendarModal">Agendar cita</button>
                   <a class="btn btn-outline-primary btn-lg hero-btn-secondary" href="#casos">Conocer más</a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-5">
               <div class="hero-image-wrapper">
-                <img
-                  class="hero-image"
-                  src="img/drbatarce.png"
-                  alt="Dr. Christian Batarce sonriendo en su consulta odontológica"
-                  loading="eager"
-                  width="1024"
-                  height="1365"
-                />
+                <div class="hero-image-frame">
+                  <img
+                    class="hero-image"
+                    src="img/drbatarce.png"
+                    alt="Dr. Christian Batarce sonriendo en su consulta odontológica"
+                    loading="eager"
+                    width="1024"
+                    height="1365"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -164,6 +172,311 @@
         </div>
       </section>
 
+      <section id="contacto-seccion" class="section-space">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="section-title">Contacta con Nosotros</h2>
+              <p class="lead-text mb-4">¿Tienes preguntas? Nos encantaría escucharte. Contáctanos de cualquiera de estas formas.</p>
+              
+              <div class="contact-item mb-4">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-content">
+                  <h3 class="contact-label">Teléfono</h3>
+                  <a href="tel:+56932554466" class="contact-value">+56 9 3255 4466</a>
+                </div>
+              </div>
+
+              <div class="contact-item mb-4">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-content">
+                  <h3 class="contact-label">Email</h3>
+                  <a href="mailto:contacto@drchristianbatarce.cl" class="contact-value">contacto@drchristianbatarce.cl</a>
+                </div>
+              </div>
+
+              <div class="contact-item mb-5">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-content">
+                  <h3 class="contact-label">Ubicación Principal</h3>
+                  <p class="contact-value">3 Poniente #1290, Talca</p>
+                </div>
+              </div>
+
+              <div class="contact-hours">
+                <h3 class="contact-label mb-3">Horario de Atención</h3>
+                <p class="mb-2"><strong>Lunes - Viernes:</strong> 9:00 - 18:00</p>
+                <p class="mb-2"><strong>Sábado:</strong> 10:00 - 14:00</p>
+                <p class="mb-0"><strong>Domingo:</strong> Cerrado</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="chat-phone-container">
+                <div class="phone-frame">
+                  <div class="phone-header">
+                    <div class="phone-status">
+                      <span class="time">9:41</span>
+                    </div>
+                    <div class="phone-carrier">
+                      <span class="carrier-name">Dr. Christian Batarce</span>
+                      <span class="carrier-status">En línea</span>
+                    </div>
+                  </div>
+                  
+                  <div class="chat-messages">
+                    <div class="message incoming message-1">
+                      <div class="message-bubble">¡Hola! Bienvenido. ¿En qué puedo ayudarte hoy?</div>
+                      <span class="message-time">9:42</span>
+                    </div>
+
+                    <div class="message outgoing message-2">
+                      <div class="message-bubble">Hola, me gustaría agendar una cita</div>
+                      <span class="message-time">9:43</span>
+                    </div>
+
+                    <div class="message incoming message-3">
+                      <div class="message-bubble">Perfecto, te ayudaré. ¿Qué tipo de servicio necesitas?</div>
+                      <span class="message-time">9:44</span>
+                    </div>
+                  </div>
+
+                  <div class="phone-input">
+                    <input type="text" placeholder="Escribe un mensaje..." readonly />
+                    <button class="send-btn">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="casos" class="section-space">
+        <div class="container">
+          <h2 class="section-title text-center">Casos de Éxito</h2>
+          <p class="section-intro text-center mb-5">
+            Transformaciones dentales que cambiaron la vida de nuestros pacientes
+          </p>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="case-item">
+                <div class="comparison-slider">
+                  <div class="comparison-img comparison-img-before">
+                    <img src="img/p1/b.png" alt="Caso 1 - Antes" />
+                  </div>
+                  <div class="comparison-img comparison-img-after">
+                    <img src="img/p1/m.png" alt="Caso 1 - Después" />
+                  </div>
+                  <div class="comparison-handle">
+                    <div class="comparison-line"></div>
+                  </div>
+                </div>
+                <div class="case-content">
+                  <h3 class="case-title">Blanqueamiento Dental</h3>
+                  <p class="case-description">Transformación completa del color de los dientes</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="case-item">
+                <div class="comparison-slider">
+                  <div class="comparison-img comparison-img-before">
+                    <img src="img/p2/b.png" alt="Caso 2 - Antes" />
+                  </div>
+                  <div class="comparison-img comparison-img-after">
+                    <img src="img/p2/m.png" alt="Caso 2 - Después" />
+                  </div>
+                  <div class="comparison-handle">
+                    <div class="comparison-line"></div>
+                  </div>
+                </div>
+                <div class="case-content">
+                  <h3 class="case-title">Restauración Dental</h3>
+                  <p class="case-description">Reparación de dientes dañados con coronas</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="case-item">
+                <div class="comparison-slider">
+                  <div class="comparison-img comparison-img-before">
+                    <img src="img/p3/b.png" alt="Caso 3 - Antes" />
+                  </div>
+                  <div class="comparison-img comparison-img-after">
+                    <img src="img/p3/m.png" alt="Caso 3 - Después" />
+                  </div>
+                  <div class="comparison-handle">
+                    <div class="comparison-line"></div>
+                  </div>
+                </div>
+                <div class="case-content">
+                  <h3 class="case-title">Ortodoncia</h3>
+                  <p class="case-description">Alineación perfecta de dientes</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="case-item">
+                <div class="comparison-slider">
+                  <div class="comparison-img comparison-img-before">
+                    <img src="img/p4/b.png" alt="Caso 4 - Antes" />
+                  </div>
+                  <div class="comparison-img comparison-img-after">
+                    <img src="img/p4/m.png" alt="Caso 4 - Después" />
+                  </div>
+                  <div class="comparison-handle">
+                    <div class="comparison-line"></div>
+                  </div>
+                </div>
+                <div class="case-content">
+                  <h3 class="case-title">Implantología</h3>
+                  <p class="case-description">Reemplazo de dientes con implantes</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="case-item">
+                <div class="comparison-slider">
+                  <div class="comparison-img comparison-img-before">
+                    <img src="img/p5/b.png" alt="Caso 5 - Antes" />
+                  </div>
+                  <div class="comparison-img comparison-img-after">
+                    <img src="img/p5/m.png" alt="Caso 5 - Después" />
+                  </div>
+                  <div class="comparison-handle">
+                    <div class="comparison-line"></div>
+                  </div>
+                </div>
+                <div class="case-content">
+                  <h3 class="case-title">Estética Dental</h3>
+                  <p class="case-description">Mejora estética integral de la sonrisa</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="case-item">
+                <div class="comparison-slider">
+                  <div class="comparison-img comparison-img-before">
+                    <img src="img/p6/b.png" alt="Caso 6 - Antes" />
+                  </div>
+                  <div class="comparison-img comparison-img-after">
+                    <img src="img/p6/m.png" alt="Caso 6 - Después" />
+                  </div>
+                  <div class="comparison-handle">
+                    <div class="comparison-line"></div>
+                  </div>
+                </div>
+                <div class="case-content">
+                  <h3 class="case-title">Rehabilitación Oral</h3>
+                  <p class="case-description">Reconstrucción completa de la dentadura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="section-space section-soft">
+        <div class="container">
+          <h2 class="section-title text-center">Lo que Dicen Nuestros Pacientes</h2>
+          <p class="section-intro text-center mb-5">
+            Testimonios de pacientes satisfechos con nuestros tratamientos
+          </p>
+
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="testimonial-card">
+                <div class="testimonial-image-wrapper">
+                  <div class="testimonial-image-placeholder">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Excelente atención, muy profesional. Mi sonrisa cambió completamente. Recomiendo ampliamente."
+                  </p>
+                  <div class="testimonial-author">
+                    <h4 class="testimonial-name">María García</h4>
+                    <p class="testimonial-role">Paciente</p>
+                  </div>
+                  <button class="testimonial-video-btn">
+                    <i class="fas fa-play"></i> Ver Video
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="testimonial-card">
+                <div class="testimonial-image-wrapper">
+                  <div class="testimonial-image-placeholder">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "El Dr. es muy dedicado y atento. Los resultados superaron mis expectativas. Muy satisfecho."
+                  </p>
+                  <div class="testimonial-author">
+                    <h4 class="testimonial-name">Juan López</h4>
+                    <p class="testimonial-role">Paciente</p>
+                  </div>
+                  <button class="testimonial-video-btn">
+                    <i class="fas fa-play"></i> Ver Video
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="testimonial-card">
+                <div class="testimonial-image-wrapper">
+                  <div class="testimonial-image-placeholder">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    "Clínica moderna, equipo profesional. Me hicieron sentir cómoda en todo momento. Gracias."
+                  </p>
+                  <div class="testimonial-author">
+                    <h4 class="testimonial-name">Ana Martínez</h4>
+                    <p class="testimonial-role">Paciente</p>
+                  </div>
+                  <button class="testimonial-video-btn">
+                    <i class="fas fa-play"></i> Ver Video
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="ubicaciones" class="section-space section-soft">
         <div class="container">
           <h2 class="section-title text-center">Dónde Encontrarnos</h2>
@@ -210,25 +523,77 @@
     </main>
 
     <footer id="contacto" class="site-footer">
-      <div class="container py-5">
-        <div class="row gy-4 align-items-center justify-content-between">
-          <div class="col-lg-5">
-            <p class="footer-name mb-2">Dr. Christian Batarce</p>
-            <p class="footer-role mb-0">Especialista en Odontología Integral</p>
-          </div>
-          <div class="col-lg-5 text-lg-end">
-            <p class="mb-2">Atención por agenda en nuestras clínicas asociadas.</p>
-            <a class="footer-link" href="tel:+56932554466">+56 9 3255 4466</a>
-            <span class="mx-2">•</span>
-            <a class="footer-link" href="mailto:contacto@drchristianbatarce.cl">contacto@drchristianbatarce.cl</a>
+      <div class="footer-main">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-column">
+                <h3 class="footer-title">La Clínica</h3>
+                <ul class="footer-links">
+                  <li><a href="#quien-soy">Quién Soy</a></li>
+                  <li><a href="#casos">Casos de Éxito</a></li>
+                  <li><a href="#testimonios">Testimonios</a></li>
+                  <li><a href="#contacto-seccion">Contacto</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-column">
+                <h3 class="footer-title">¿Dónde estamos?</h3>
+                <p class="footer-text">Clínica IOT Talca</p>
+                <p class="footer-text">3 Poniente #1290, esquina 2 Norte</p>
+                <p class="footer-text">Talca, Chile</p>
+                <p class="footer-text mt-3">
+                  <i class="fas fa-phone"></i> +56 9 3255 4466
+                </p>
+                <p class="footer-text">
+                  <i class="fas fa-envelope"></i> contacto@drchristianbatarce.cl
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-column">
+                <h3 class="footer-title">Información</h3>
+                <ul class="footer-links">
+                  <li><a href="#privacidad">Política de Privacidad</a></li>
+                  <li><a href="#cookies">Política de Cookies</a></li>
+                  <li><a href="#legal">Aviso Legal</a></li>
+                  <li><a href="#ubicaciones">Ubicaciones</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-column">
+                <h3 class="footer-title">Síguenos</h3>
+                <div class="footer-social">
+                  <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="social-icon" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <hr class="footer-divider" />
-
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-          <p class="mb-0">© 2026 Dr. Christian Batarce. Todos los derechos reservados.</p>
-          <p class="mb-0">Diseño y comunicación profesional orientada al paciente.</p>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-12 text-center">
+              <p class="footer-copyright mb-0">
+                © 2026 Dr. Christian Batarce - Todos los derechos reservados - Odontología Profesional
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -236,6 +601,103 @@
     <a href="https://wa.me/56932554466" class="whatsapp-button" title="Contactar por WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Modal Agendar Cita -->
+    <div class="modal fade" id="agendarModal" tabindex="-1" aria-labelledby="agendarModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="agendarModalLabel">Agendar una Cita</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-intro">Complete el formulario y nos pondremos en contacto con usted para confirmar su cita.</p>
+            
+            <form id="agendarForm" class="appointment-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre Completo *</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Correo Electrónico *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="telefono" class="form-label">Teléfono *</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="fecha" class="form-label">Fecha Preferida *</label>
+                  <input type="date" class="form-control" id="fecha" name="fecha" required>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="hora" class="form-label">Hora Preferida *</label>
+                  <select class="form-select" id="hora" name="hora" required>
+                    <option value="">Seleccione una hora</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                  </select>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="servicio" class="form-label">Tipo de Servicio *</label>
+                  <select class="form-select" id="servicio" name="servicio" required>
+                    <option value="">Seleccione un servicio</option>
+                    <option value="blanqueamiento">Blanqueamiento Dental</option>
+                    <option value="ortodoncia">Ortodoncia</option>
+                    <option value="implantes">Implantología</option>
+                    <option value="estetica">Estética Dental</option>
+                    <option value="restauracion">Restauración Dental</option>
+                    <option value="limpieza">Limpieza Dental</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                
+                <div class="col-12">
+                  <label for="clinica" class="form-label">Clínica de Preferencia *</label>
+                  <select class="form-select" id="clinica" name="clinica" required>
+                    <option value="">Seleccione una clínica</option>
+                    <option value="iot-talca">Clínica IOT Talca</option>
+                    <option value="vg-pichimpau">Clínica VG Odontología Talca Pichimpau</option>
+                    <option value="dental-curico">Clínica Dental Maule Curicó</option>
+                    <option value="dental-chillan">Clínica Dental Chillán</option>
+                  </select>
+                </div>
+                
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje Adicional (Opcional)</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Cuéntenos sobre su consulta o necesidades específicas..."></textarea>
+                </div>
+              </div>
+              
+              <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="privacidad" required>
+                <label class="form-check-label" for="privacidad">
+                  Acepto la <a href="#privacidad" target="_blank">política de privacidad</a> y el tratamiento de mis datos personales.
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" form="agendarForm" class="btn btn-primary">
+              <i class="fas fa-calendar-check"></i> Solicitar Cita
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
