@@ -1477,7 +1477,7 @@ body {
 .comparison-slider {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 12px 32px rgba(13, 110, 253, 0.15);
@@ -1944,7 +1944,7 @@ body {
 
 @media (max-width: 991.98px) {
   .comparison-slider {
-    aspect-ratio: 1 / 1.1;
+    aspect-ratio: 16 / 9;
   }
 
   .case-title {
@@ -2007,7 +2007,7 @@ body {
   }
 
   .comparison-slider {
-    aspect-ratio: 1 / 1.2;
+    aspect-ratio: 16 / 9;
   }
 
   .case-title {
